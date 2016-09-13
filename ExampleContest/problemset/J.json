@@ -1,0 +1,167 @@
+{
+  "__type" : "problemWithChecker",
+  "id" : "175943/2016_09_11/VqxTjjYWF7",
+  "ownerId" : 175943,
+  "testFileType" : "text",
+  "creationTime" : 1473593288823,
+  "modifyTime" : 1473593556806,
+  "shortName" : "",
+  "defaultLocale" : "ru",
+  "names" : {
+    "ru" : "Цвет клеток шахматной доски",
+    "en" : ""
+  },
+  "statements" : [ {
+    "locale" : "ru",
+    "type" : "tex",
+    "path" : "statements/.html/ru/texstatement.html",
+    "additional" : false,
+    "auxiliaryFiles" : [ ],
+    "state" : "valid",
+    "rendered" : true,
+    "texStatement" : {
+      "legend" : "Заданы две клетки шахматной доски. Если они покрашены в один цвет, то выведите слово YES, а если в разные цвета – то NO.",
+      "inputFormat" : "Вводятся 4 числа - координаты клеток.",
+      "outputFormat" : "Выведите ответ на задачу.",
+      "notes" : ""
+    }
+  } ],
+  "fileSet" : {
+    "inputFile" : "input.txt",
+    "outputFile" : "output.txt",
+    "redirectStdin" : true,
+    "redirectStdout" : true
+  },
+  "solutionLimits" : {
+    "timeLimitMillis" : 1000,
+    "idlenessLimitMillis" : 10000,
+    "memoryLimit" : 67108864,
+    "outputLimit" : 67108864
+  },
+  "deleted" : false,
+  "sourceSizeLimit" : 262144,
+  "fileCreationAllowed" : false,
+  "customCompilerGroupLimits" : [ ],
+  "testSets" : [ {
+    "name" : "samples",
+    "inputFilePattern" : "tests/{01-02}",
+    "answerFilePattern" : "*.a",
+    "matchedTests" : [ {
+      "inputPath" : "tests/01",
+      "answerPath" : "tests/01.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/02",
+      "answerPath" : "tests/02.a",
+      "inputExists" : true,
+      "answerExists" : true
+    } ],
+    "testsMatched" : true
+  }, {
+    "name" : "All tests",
+    "inputFilePattern" : "tests/{01-}",
+    "answerFilePattern" : "*.a",
+    "matchedTests" : [ {
+      "inputPath" : "tests/01",
+      "answerPath" : "tests/01.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/02",
+      "answerPath" : "tests/02.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/03",
+      "answerPath" : "tests/03.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/04",
+      "answerPath" : "tests/04.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/05",
+      "answerPath" : "tests/05.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/06",
+      "answerPath" : "tests/06.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/07",
+      "answerPath" : "tests/07.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/08",
+      "answerPath" : "tests/08.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/09",
+      "answerPath" : "tests/09.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/10",
+      "answerPath" : "tests/10.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/11",
+      "answerPath" : "tests/11.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/12",
+      "answerPath" : "tests/12.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/13",
+      "answerPath" : "tests/13.a",
+      "inputExists" : true,
+      "answerExists" : true
+    } ],
+    "testsMatched" : true
+  } ],
+  "generators" : [ ],
+  "generateTestCommands" : [ ],
+  "solutions" : [ {
+    "compilerId" : "python3_4",
+    "sourcePath" : "sol.py",
+    "verdict" : "ok"
+  } ],
+  "tags" : [ ],
+  "includeFiles" : [ ],
+  "includeRunFiles" : [ ],
+  "postProcessFiles" : [ ],
+  "validators" : [ ],
+  "htmlGenerator" : "ya-contest",
+  "compilationLimits" : {
+    "timeLimitMillis" : 60000,
+    "idlenessLimitMillis" : 60000,
+    "memoryLimit" : 1598029824,
+    "outputLimit" : 100000000
+  },
+  "customCompilationLimits" : [ ],
+  "fieldType" : "text-or-file",
+  "validation" : { },
+  "userAccess" : [ ],
+  "checkerSettings" : {
+    "__type" : "standardChecker",
+    "limits" : {
+      "timeLimitMillis" : 10000,
+      "idlenessLimitMillis" : 10000,
+      "memoryLimit" : 268435456,
+      "outputLimit" : 268435456
+    },
+    "env" : { },
+    "checkerId" : "yesno"
+  }
+}

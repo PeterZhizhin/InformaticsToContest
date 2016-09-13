@@ -1,0 +1,222 @@
+{
+  "__type" : "problemWithChecker",
+  "id" : "175943/2016_09_11/GJvmTy76MZ",
+  "ownerId" : 175943,
+  "testFileType" : "text",
+  "creationTime" : 1473594631591,
+  "modifyTime" : 1473595285774,
+  "shortName" : "",
+  "defaultLocale" : "ru",
+  "names" : {
+    "ru" : "Тип треугольника",
+    "en" : ""
+  },
+  "statements" : [ {
+    "locale" : "ru",
+    "type" : "tex",
+    "path" : "statements/.html/ru/texstatement.html",
+    "additional" : false,
+    "auxiliaryFiles" : [ ],
+    "state" : "valid",
+    "rendered" : true,
+    "texStatement" : {
+      "legend" : "\r\n\r\nДаны три стороны треугольника $a, b, c$. Определите тип треугольника с заданными сторонами. Выведите одно из четырех слов: rectangular для прямоугольного треугольника, acute для остроугольного треугольника, obtuse для тупоугольного треугольника или impossible, если треугольника с такими сторонами не существует.\r\n",
+      "inputFormat" : "Вводятся три целых числа.",
+      "outputFormat" : "Выведите ответ на задачу.",
+      "notes" : ""
+    }
+  } ],
+  "fileSet" : {
+    "inputFile" : "input.txt",
+    "outputFile" : "output.txt",
+    "redirectStdin" : true,
+    "redirectStdout" : true
+  },
+  "solutionLimits" : {
+    "timeLimitMillis" : 1000,
+    "idlenessLimitMillis" : 10000,
+    "memoryLimit" : 67108864,
+    "outputLimit" : 67108864
+  },
+  "deleted" : false,
+  "sourceSizeLimit" : 262144,
+  "fileCreationAllowed" : false,
+  "customCompilerGroupLimits" : [ ],
+  "testSets" : [ {
+    "name" : "samples",
+    "inputFilePattern" : "tests_/{01,06}",
+    "answerFilePattern" : "*.a",
+    "matchedTests" : [ {
+      "inputPath" : "tests_/01",
+      "answerPath" : "tests_/01.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests_/06",
+      "answerPath" : "tests_/06.a",
+      "inputExists" : true,
+      "answerExists" : true
+    } ],
+    "testsMatched" : true
+  }, {
+    "name" : "All tests",
+    "inputFilePattern" : "tests_/{01-}",
+    "answerFilePattern" : "*.a",
+    "matchedTests" : [ {
+      "inputPath" : "tests_/01",
+      "answerPath" : "tests_/01.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests_/02",
+      "answerPath" : "tests_/02.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests_/03",
+      "answerPath" : "tests_/03.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests_/04",
+      "answerPath" : "tests_/04.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests_/05",
+      "answerPath" : "tests_/05.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests_/06",
+      "answerPath" : "tests_/06.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests_/07",
+      "answerPath" : "tests_/07.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests_/08",
+      "answerPath" : "tests_/08.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests_/09",
+      "answerPath" : "tests_/09.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests_/10",
+      "answerPath" : "tests_/10.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests_/11",
+      "answerPath" : "tests_/11.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests_/12",
+      "answerPath" : "tests_/12.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests_/13",
+      "answerPath" : "tests_/13.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests_/14",
+      "answerPath" : "tests_/14.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests_/15",
+      "answerPath" : "tests_/15.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests_/16",
+      "answerPath" : "tests_/16.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests_/17",
+      "answerPath" : "tests_/17.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests_/18",
+      "answerPath" : "tests_/18.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests_/19",
+      "answerPath" : "tests_/19.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests_/20",
+      "answerPath" : "tests_/20.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests_/21",
+      "answerPath" : "tests_/21.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests_/22",
+      "answerPath" : "tests_/22.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests_/23",
+      "answerPath" : "tests_/23.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests_/24",
+      "answerPath" : "tests_/24.a",
+      "inputExists" : true,
+      "answerExists" : true
+    } ],
+    "testsMatched" : true
+  } ],
+  "generators" : [ ],
+  "generateTestCommands" : [ ],
+  "solutions" : [ {
+    "compilerId" : "python3_4",
+    "sourcePath" : "sol.py",
+    "verdict" : "ok"
+  } ],
+  "tags" : [ ],
+  "includeFiles" : [ ],
+  "includeRunFiles" : [ ],
+  "postProcessFiles" : [ ],
+  "validators" : [ ],
+  "htmlGenerator" : "ya-contest",
+  "compilationLimits" : {
+    "timeLimitMillis" : 60000,
+    "idlenessLimitMillis" : 60000,
+    "memoryLimit" : 1598029824,
+    "outputLimit" : 100000000
+  },
+  "customCompilationLimits" : [ ],
+  "fieldType" : "text-or-file",
+  "validation" : { },
+  "userAccess" : [ ],
+  "checkerSettings" : {
+    "__type" : "standardChecker",
+    "limits" : {
+      "timeLimitMillis" : 10000,
+      "idlenessLimitMillis" : 10000,
+      "memoryLimit" : 268435456,
+      "outputLimit" : 268435456
+    },
+    "env" : { },
+    "checkerId" : "wcmp"
+  }
+}

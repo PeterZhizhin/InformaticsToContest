@@ -1,0 +1,317 @@
+{
+  "__type" : "problemWithChecker",
+  "id" : "175943/2016_09_11/A9pvIKmc9A",
+  "ownerId" : 175943,
+  "testFileType" : "text",
+  "creationTime" : 1473598844667,
+  "modifyTime" : 1473599210713,
+  "shortName" : "",
+  "defaultLocale" : "ru",
+  "names" : {
+    "ru" : "Упаковка*",
+    "en" : ""
+  },
+  "statements" : [ {
+    "locale" : "ru",
+    "type" : "tex",
+    "path" : "statements/.html/ru/texstatement.html",
+    "additional" : false,
+    "auxiliaryFiles" : [ ],
+    "state" : "valid",
+    "rendered" : true,
+    "texStatement" : {
+      "legend" : "В одну транспортную компанию поступил заказ на перевозку двух ящиков из одного города в другой. Для перевозки ящики решено было упаковать в специальный контейнер.\r\n\r\nЯщики и контейнер имеют вид прямоугольных параллелепипедов. Длина, ширина и высота первого ящика --- $l_1, w_1$ и $h_1$, соответствующие размеры второго ящика – $l_2, w_2$ и $h_2$. Контейнер имеет длину, ширину и высоту $l_c, w_c$ и $h_c$.\r\n\r\nПоскольку ящики содержат хрупкое оборудование, после упаковки в контейнер каждый из них должен остаться в строго вертикальном положении. Таким образом, ящики можно разместить рядом или один на другом. Для надежного закрепления в контейнере стороны ящиков должны быть параллельны его сторонам. Иначе говоря, если исходно ящики были расположены так, что все их стороны параллельны соответствующим сторонам контейнера, то каждый из них разрешается перемещать и поворачивать относительно вертикальной оси на угол, кратный 90 градусам.\r\n\r\nРазумеется, после упаковки оба ящика должны полностью находиться внутри контейнера и не должны пересекаться.\r\n\r\nВыясните, можно ли поместить ящики в контейнер с соблюдением указанных условий. ",
+      "inputFormat" : " Первая строка входных данных содержит $l_1, w_1$ и $h_1$, вторая --- $l_2, w_2$ и $h_2$, третья – $l_c, w_c$ и $h_c$. Все размеры --- целые положительные числа, не превышающие 1000. Числа в строках разделены пробелами. ",
+      "outputFormat" : "",
+      "notes" : ""
+    }
+  } ],
+  "fileSet" : {
+    "inputFile" : "input.txt",
+    "outputFile" : "output.txt",
+    "redirectStdin" : true,
+    "redirectStdout" : true
+  },
+  "solutionLimits" : {
+    "timeLimitMillis" : 1000,
+    "idlenessLimitMillis" : 10000,
+    "memoryLimit" : 67108864,
+    "outputLimit" : 67108864
+  },
+  "deleted" : false,
+  "sourceSizeLimit" : 262144,
+  "fileCreationAllowed" : false,
+  "customCompilerGroupLimits" : [ ],
+  "testSets" : [ {
+    "name" : "samples",
+    "inputFilePattern" : "tests/{01-05}",
+    "answerFilePattern" : "*.a",
+    "matchedTests" : [ {
+      "inputPath" : "tests/01",
+      "answerPath" : "tests/01.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/02",
+      "answerPath" : "tests/02.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/03",
+      "answerPath" : "tests/03.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/04",
+      "answerPath" : "tests/04.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/05",
+      "answerPath" : "tests/05.a",
+      "inputExists" : true,
+      "answerExists" : true
+    } ],
+    "testsMatched" : true
+  }, {
+    "name" : "All tests",
+    "inputFilePattern" : "tests/{01-}",
+    "answerFilePattern" : "*.a",
+    "matchedTests" : [ {
+      "inputPath" : "tests/01",
+      "answerPath" : "tests/01.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/02",
+      "answerPath" : "tests/02.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/03",
+      "answerPath" : "tests/03.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/04",
+      "answerPath" : "tests/04.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/05",
+      "answerPath" : "tests/05.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/06",
+      "answerPath" : "tests/06.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/07",
+      "answerPath" : "tests/07.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/08",
+      "answerPath" : "tests/08.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/09",
+      "answerPath" : "tests/09.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/10",
+      "answerPath" : "tests/10.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/11",
+      "answerPath" : "tests/11.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/12",
+      "answerPath" : "tests/12.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/13",
+      "answerPath" : "tests/13.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/14",
+      "answerPath" : "tests/14.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/15",
+      "answerPath" : "tests/15.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/16",
+      "answerPath" : "tests/16.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/17",
+      "answerPath" : "tests/17.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/18",
+      "answerPath" : "tests/18.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/19",
+      "answerPath" : "tests/19.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/20",
+      "answerPath" : "tests/20.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/21",
+      "answerPath" : "tests/21.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/22",
+      "answerPath" : "tests/22.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/23",
+      "answerPath" : "tests/23.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/24",
+      "answerPath" : "tests/24.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/25",
+      "answerPath" : "tests/25.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/26",
+      "answerPath" : "tests/26.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/27",
+      "answerPath" : "tests/27.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/28",
+      "answerPath" : "tests/28.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/29",
+      "answerPath" : "tests/29.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/30",
+      "answerPath" : "tests/30.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/31",
+      "answerPath" : "tests/31.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/32",
+      "answerPath" : "tests/32.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/33",
+      "answerPath" : "tests/33.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/34",
+      "answerPath" : "tests/34.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/35",
+      "answerPath" : "tests/35.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/36",
+      "answerPath" : "tests/36.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/37",
+      "answerPath" : "tests/37.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/38",
+      "answerPath" : "tests/38.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/39",
+      "answerPath" : "tests/39.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/40",
+      "answerPath" : "tests/40.a",
+      "inputExists" : true,
+      "answerExists" : true
+    } ],
+    "testsMatched" : true
+  } ],
+  "generators" : [ ],
+  "generateTestCommands" : [ ],
+  "solutions" : [ {
+    "compilerId" : "python3_4",
+    "sourcePath" : "sol.py",
+    "verdict" : "ok"
+  } ],
+  "tags" : [ ],
+  "includeFiles" : [ ],
+  "includeRunFiles" : [ ],
+  "postProcessFiles" : [ ],
+  "validators" : [ ],
+  "htmlGenerator" : "ya-contest",
+  "compilationLimits" : {
+    "timeLimitMillis" : 60000,
+    "idlenessLimitMillis" : 60000,
+    "memoryLimit" : 1598029824,
+    "outputLimit" : 100000000
+  },
+  "customCompilationLimits" : [ ],
+  "fieldType" : "text-or-file",
+  "validation" : { },
+  "userAccess" : [ ],
+  "checkerSettings" : {
+    "__type" : "standardChecker",
+    "limits" : {
+      "timeLimitMillis" : 10000,
+      "idlenessLimitMillis" : 10000,
+      "memoryLimit" : 268435456,
+      "outputLimit" : 268435456
+    },
+    "env" : { },
+    "checkerId" : "yesno"
+  }
+}

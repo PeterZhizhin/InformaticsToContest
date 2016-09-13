@@ -1,0 +1,602 @@
+{
+  "__type" : "problemWithChecker",
+  "id" : "175943/2016_09_11/FF3c8SAVBW",
+  "ownerId" : 175943,
+  "testFileType" : "text",
+  "creationTime" : 1473596252661,
+  "modifyTime" : 1473596460151,
+  "shortName" : "",
+  "defaultLocale" : "ru",
+  "names" : {
+    "ru" : "Коровы",
+    "en" : ""
+  },
+  "statements" : [ {
+    "locale" : "ru",
+    "type" : "tex",
+    "path" : "statements/.html/ru/texstatement.html",
+    "additional" : false,
+    "auxiliaryFiles" : [ ],
+    "state" : "valid",
+    "rendered" : true,
+    "texStatement" : {
+      "legend" : "\r\n\r\nДля данного числа $n<100$ закончите фразу “На лугу пасется...” одним из возможных продолжений: “$n$ коров”, “$n$ корова”, “$n$ коровы”, правильно склоняя слово “корова”.\r\n",
+      "inputFormat" : "Вводится натуральное число.",
+      "outputFormat" : "Программа должна вывести введенное число n и одно из слов: korov, korova или korovy. Между числом и словом должен стоять ровно один пробел.",
+      "notes" : ""
+    }
+  } ],
+  "fileSet" : {
+    "inputFile" : "input.txt",
+    "outputFile" : "output.txt",
+    "redirectStdin" : true,
+    "redirectStdout" : true
+  },
+  "solutionLimits" : {
+    "timeLimitMillis" : 1000,
+    "idlenessLimitMillis" : 10000,
+    "memoryLimit" : 67108864,
+    "outputLimit" : 67108864
+  },
+  "deleted" : false,
+  "sourceSizeLimit" : 262144,
+  "fileCreationAllowed" : false,
+  "customCompilerGroupLimits" : [ ],
+  "testSets" : [ {
+    "name" : "samples",
+    "inputFilePattern" : "tests/{01-03}",
+    "answerFilePattern" : "*.a",
+    "matchedTests" : [ {
+      "inputPath" : "tests/01",
+      "answerPath" : "tests/01.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/02",
+      "answerPath" : "tests/02.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/03",
+      "answerPath" : "tests/03.a",
+      "inputExists" : true,
+      "answerExists" : true
+    } ],
+    "testsMatched" : true
+  }, {
+    "name" : "All tests",
+    "inputFilePattern" : "tests/{01-}",
+    "answerFilePattern" : "*.a",
+    "matchedTests" : [ {
+      "inputPath" : "tests/01",
+      "answerPath" : "tests/01.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/02",
+      "answerPath" : "tests/02.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/03",
+      "answerPath" : "tests/03.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/04",
+      "answerPath" : "tests/04.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/05",
+      "answerPath" : "tests/05.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/06",
+      "answerPath" : "tests/06.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/07",
+      "answerPath" : "tests/07.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/08",
+      "answerPath" : "tests/08.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/09",
+      "answerPath" : "tests/09.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/10",
+      "answerPath" : "tests/10.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/11",
+      "answerPath" : "tests/11.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/12",
+      "answerPath" : "tests/12.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/13",
+      "answerPath" : "tests/13.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/14",
+      "answerPath" : "tests/14.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/15",
+      "answerPath" : "tests/15.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/16",
+      "answerPath" : "tests/16.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/17",
+      "answerPath" : "tests/17.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/18",
+      "answerPath" : "tests/18.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/19",
+      "answerPath" : "tests/19.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/20",
+      "answerPath" : "tests/20.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/21",
+      "answerPath" : "tests/21.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/22",
+      "answerPath" : "tests/22.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/23",
+      "answerPath" : "tests/23.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/24",
+      "answerPath" : "tests/24.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/25",
+      "answerPath" : "tests/25.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/26",
+      "answerPath" : "tests/26.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/27",
+      "answerPath" : "tests/27.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/28",
+      "answerPath" : "tests/28.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/29",
+      "answerPath" : "tests/29.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/30",
+      "answerPath" : "tests/30.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/31",
+      "answerPath" : "tests/31.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/32",
+      "answerPath" : "tests/32.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/33",
+      "answerPath" : "tests/33.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/34",
+      "answerPath" : "tests/34.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/35",
+      "answerPath" : "tests/35.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/36",
+      "answerPath" : "tests/36.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/37",
+      "answerPath" : "tests/37.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/38",
+      "answerPath" : "tests/38.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/39",
+      "answerPath" : "tests/39.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/40",
+      "answerPath" : "tests/40.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/41",
+      "answerPath" : "tests/41.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/42",
+      "answerPath" : "tests/42.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/43",
+      "answerPath" : "tests/43.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/44",
+      "answerPath" : "tests/44.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/45",
+      "answerPath" : "tests/45.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/46",
+      "answerPath" : "tests/46.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/47",
+      "answerPath" : "tests/47.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/48",
+      "answerPath" : "tests/48.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/49",
+      "answerPath" : "tests/49.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/50",
+      "answerPath" : "tests/50.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/51",
+      "answerPath" : "tests/51.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/52",
+      "answerPath" : "tests/52.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/53",
+      "answerPath" : "tests/53.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/54",
+      "answerPath" : "tests/54.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/55",
+      "answerPath" : "tests/55.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/56",
+      "answerPath" : "tests/56.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/57",
+      "answerPath" : "tests/57.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/58",
+      "answerPath" : "tests/58.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/59",
+      "answerPath" : "tests/59.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/60",
+      "answerPath" : "tests/60.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/61",
+      "answerPath" : "tests/61.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/62",
+      "answerPath" : "tests/62.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/63",
+      "answerPath" : "tests/63.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/64",
+      "answerPath" : "tests/64.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/65",
+      "answerPath" : "tests/65.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/66",
+      "answerPath" : "tests/66.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/67",
+      "answerPath" : "tests/67.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/68",
+      "answerPath" : "tests/68.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/69",
+      "answerPath" : "tests/69.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/70",
+      "answerPath" : "tests/70.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/71",
+      "answerPath" : "tests/71.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/72",
+      "answerPath" : "tests/72.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/73",
+      "answerPath" : "tests/73.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/74",
+      "answerPath" : "tests/74.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/75",
+      "answerPath" : "tests/75.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/76",
+      "answerPath" : "tests/76.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/77",
+      "answerPath" : "tests/77.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/78",
+      "answerPath" : "tests/78.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/79",
+      "answerPath" : "tests/79.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/80",
+      "answerPath" : "tests/80.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/81",
+      "answerPath" : "tests/81.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/82",
+      "answerPath" : "tests/82.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/83",
+      "answerPath" : "tests/83.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/84",
+      "answerPath" : "tests/84.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/85",
+      "answerPath" : "tests/85.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/86",
+      "answerPath" : "tests/86.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/87",
+      "answerPath" : "tests/87.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/88",
+      "answerPath" : "tests/88.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/89",
+      "answerPath" : "tests/89.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/90",
+      "answerPath" : "tests/90.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/91",
+      "answerPath" : "tests/91.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/92",
+      "answerPath" : "tests/92.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/93",
+      "answerPath" : "tests/93.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/94",
+      "answerPath" : "tests/94.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/95",
+      "answerPath" : "tests/95.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/96",
+      "answerPath" : "tests/96.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/97",
+      "answerPath" : "tests/97.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/98",
+      "answerPath" : "tests/98.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/99",
+      "answerPath" : "tests/99.a",
+      "inputExists" : true,
+      "answerExists" : true
+    } ],
+    "testsMatched" : true
+  } ],
+  "generators" : [ ],
+  "generateTestCommands" : [ ],
+  "solutions" : [ {
+    "compilerId" : "gcc0x",
+    "sourcePath" : "solution.cpp",
+    "verdict" : "ok"
+  } ],
+  "tags" : [ ],
+  "includeFiles" : [ ],
+  "includeRunFiles" : [ ],
+  "postProcessFiles" : [ ],
+  "validators" : [ ],
+  "htmlGenerator" : "ya-contest",
+  "compilationLimits" : {
+    "timeLimitMillis" : 60000,
+    "idlenessLimitMillis" : 60000,
+    "memoryLimit" : 1598029824,
+    "outputLimit" : 100000000
+  },
+  "customCompilationLimits" : [ ],
+  "fieldType" : "text-or-file",
+  "validation" : { },
+  "userAccess" : [ ],
+  "checkerSettings" : {
+    "__type" : "standardChecker",
+    "limits" : {
+      "timeLimitMillis" : 10000,
+      "idlenessLimitMillis" : 10000,
+      "memoryLimit" : 268435456,
+      "outputLimit" : 268435456
+    },
+    "env" : { },
+    "checkerId" : "wcmp"
+  }
+}

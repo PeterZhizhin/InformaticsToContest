@@ -1,0 +1,127 @@
+{
+  "__type" : "problemWithChecker",
+  "id" : "175943/2016_09_11/udjhhG3bez",
+  "ownerId" : 175943,
+  "testFileType" : "text",
+  "creationTime" : 1473584647979,
+  "modifyTime" : 1473589870272,
+  "shortName" : "",
+  "defaultLocale" : "ru",
+  "names" : {
+    "ru" : "Какое число больше?",
+    "en" : ""
+  },
+  "statements" : [ {
+    "locale" : "ru",
+    "type" : "tex",
+    "path" : "statements/.html/ru/texstatement.html",
+    "additional" : false,
+    "auxiliaryFiles" : [ ],
+    "state" : "valid",
+    "rendered" : true,
+    "texStatement" : {
+      "legend" : "Даны два целых числа. Программа должна вывести число 1, если первое число больше второго, число 2, если второе больше первого или число 0, если они равны.",
+      "inputFormat" : "Вводятся два целых числа.",
+      "outputFormat" : "Выведите ответ на задачу.",
+      "notes" : "Эту задачу желательно решить с использованием каскадных инструкций if... elif... else."
+    }
+  } ],
+  "fileSet" : {
+    "inputFile" : "input.txt",
+    "outputFile" : "output.txt",
+    "redirectStdin" : true,
+    "redirectStdout" : true
+  },
+  "solutionLimits" : {
+    "timeLimitMillis" : 1000,
+    "idlenessLimitMillis" : 10000,
+    "memoryLimit" : 67108864,
+    "outputLimit" : 67108864
+  },
+  "deleted" : false,
+  "sourceSizeLimit" : 262144,
+  "fileCreationAllowed" : false,
+  "customCompilerGroupLimits" : [ ],
+  "testSets" : [ {
+    "name" : "samples",
+    "inputFilePattern" : "tests/{01-01}",
+    "answerFilePattern" : "*.a",
+    "matchedTests" : [ {
+      "inputPath" : "tests/01",
+      "answerPath" : "tests/01.a",
+      "inputExists" : true,
+      "answerExists" : true
+    } ],
+    "testsMatched" : true
+  }, {
+    "name" : "All tests",
+    "inputFilePattern" : "tests/{01-}",
+    "answerFilePattern" : "*.a",
+    "matchedTests" : [ {
+      "inputPath" : "tests/01",
+      "answerPath" : "tests/01.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/02",
+      "answerPath" : "tests/02.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/03",
+      "answerPath" : "tests/03.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/04",
+      "answerPath" : "tests/04.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/05",
+      "answerPath" : "tests/05.a",
+      "inputExists" : true,
+      "answerExists" : true
+    }, {
+      "inputPath" : "tests/06",
+      "answerPath" : "tests/06.a",
+      "inputExists" : true,
+      "answerExists" : true
+    } ],
+    "testsMatched" : true
+  } ],
+  "generators" : [ ],
+  "generateTestCommands" : [ ],
+  "solutions" : [ {
+    "compilerId" : "python3_4",
+    "sourcePath" : "solutions/solution.py",
+    "verdict" : "ok"
+  } ],
+  "tags" : [ ],
+  "includeFiles" : [ ],
+  "includeRunFiles" : [ ],
+  "postProcessFiles" : [ ],
+  "validators" : [ ],
+  "htmlGenerator" : "ya-contest",
+  "compilationLimits" : {
+    "timeLimitMillis" : 60000,
+    "idlenessLimitMillis" : 60000,
+    "memoryLimit" : 1598029824,
+    "outputLimit" : 100000000
+  },
+  "customCompilationLimits" : [ ],
+  "fieldType" : "text-or-file",
+  "validation" : { },
+  "userAccess" : [ ],
+  "checkerSettings" : {
+    "__type" : "standardChecker",
+    "limits" : {
+      "timeLimitMillis" : 10000,
+      "idlenessLimitMillis" : 10000,
+      "memoryLimit" : 268435456,
+      "outputLimit" : 268435456
+    },
+    "env" : { },
+    "checkerId" : "ncmp"
+  }
+}
