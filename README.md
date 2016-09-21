@@ -23,7 +23,7 @@ $ cp auth_info.py.example auth_info.py
 
 4. Примонтируйте при помощи sshfs папку /home/judges куда-либо внутри файловой системы локального компьютера:
 ```bash
-sshfs ejudge@informatics.mccme.ru:/home/judges /home/<USERNAME>/<FOLDERNAME>/
+$ sshfs ejudge@informatics.mccme.ru:/home/judges /home/<USERNAME>/<FOLDERNAME>/
 ```
 
 ## Параметры запуска
@@ -36,5 +36,5 @@ sshfs ejudge@informatics.mccme.ru:/home/judges /home/<USERNAME>/<FOLDERNAME>/
 -i --ids Список номеров задач с сайта (указанных через пробел)
 
 Пример:
-./main.py -d tasks -j /home/user/informatics/home/judges/ -i 501 520 3521
+$ ./main.py -d tasks -j /home/user/informatics/home/judges/ -i 501 520 3521
 ```
