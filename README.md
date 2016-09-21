@@ -5,7 +5,7 @@
 ## Требования
 
 * Python 3.5 или выше.
-* Библиотеки aiohttp, aiofiles.
+* Библиотеки aiohttp, aiofiles, BeautifulSoup, lxml (более полный список в requirements.txt).
 * Права администратора на [informatics.mccme.ru](informatics.mccme.ru).
 * Доступ на SSH сайта informatics.
 
