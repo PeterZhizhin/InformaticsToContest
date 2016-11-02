@@ -56,7 +56,7 @@ class YandexContestProblem:
         return solutions, solution_string
 
     @staticmethod
-    def get_json_for_contest(problem, tests_files, solutions):
+    def get_json_for_contest(problem, solutions):
         yandex_contest_json = dict(contest_json)
 
         name = problem['name']
@@ -77,9 +77,6 @@ class YandexContestProblem:
         yandex_contest_json['statements'][0]['texStatement']['outputFormat'] = output_descr
         yandex_contest_json['statements'][0]['texStatement']['notes'] = note
 
-        samples = yandex_contest_json['testSets'][0]
-        all_tests = yandex_contest_json['testSets'][1]
-
         task_solutions = []
         for solution in solutions:
             task_solutions.append({
@@ -95,7 +92,8 @@ class YandexContestProblem:
         print('Saving task {}'.format(task_dir.name))
 
         task_dir.mkdir(parents=True)
-        tests_files = self.save_tests(task_dir)
+        if 'tests' in self.problem:
+            tests_files = self.save_tests(task_dir)
         solutions, solution_string = self.save_solutions(task_dir)
 
         problem = self.problem
@@ -109,7 +107,7 @@ class YandexContestProblem:
                   solution_string,
                   file=info_file, sep=separator)
 
-        good_json = YandexContestProblem.get_json_for_contest(problem, tests_files, solutions)
+        good_json = YandexContestProblem.get_json_for_contest(problem, solutions)
         with (task_dir / 'problem.json').open('w') as problem_file:
             json.dump(good_json, problem_file, sort_keys=True, indent=4, ensure_ascii=False)
 

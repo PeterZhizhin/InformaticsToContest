@@ -24,16 +24,20 @@ test_corr_filename_re = re.compile(r'^\d*\.a$')
 
 class InformaticsDownloader:
     semaphore = asyncio.Semaphore(5000)
+    opened_files_semaphore = asyncio.Semaphore(200)
 
     @staticmethod
-    async def get_async_unbounded(session, url, **kwargs):
+    async def get_async_unbounded(session, url, raw_bytes=False, **kwargs):
         async with session.get(url, **kwargs) as resp:
             print('Getting {}'.format(url))
             if resp.status != 200:
                 await asyncio.sleep(0.5)
                 print('Retry {}'.format(url))
                 return await InformaticsDownloader.get_async(session, url, **kwargs)
-            return await resp.text()
+            if raw_bytes:
+                return await resp.read()
+            else:
+                return await resp.text()
 
     @staticmethod
     async def get_async(session, url, **kwargs):
@@ -42,12 +46,12 @@ class InformaticsDownloader:
 
     @staticmethod
     def fix_latex(s):
-        return s.replace('\(', '$').replace('\)').replace(
-            '\left(', '(').replace('\right', ')').replace(
+        return s.replace('\(', '$').replace('\)', '$').replace(
+            '\left(', '(').replace('\\right', ')').replace(
             '\[', "\n\n$"
         ).replace('\]', '\n\n$').replace('\left[', '[').replace(
-            '\right]', ']'
-        ).replace('\left{', '{').replace('\right}', '}')
+            '\\right]', ']'
+        ).replace('\left{', '{').replace('\\right}', '}')
 
     @staticmethod
     def parse_html(html, id):
@@ -62,19 +66,29 @@ class InformaticsDownloader:
         description = InformaticsDownloader.fix_latex(description)
 
         contest_raw = task_div.find('a',
-                                    attrs={'href': lambda x: '/cgi-bin/new-master?contest_id' in x}).text
+                                    attrs={'href': lambda x: False if x is None else
+                                    '/cgi-bin/new-master?contest_id' in x}).text
         contest_info = contest_raw.split()
         contest_info = {
             'number': contest_info[1],
             'problem_id': contest_info[-1]
         }
 
-        input = statements_soup.find('div', attrs={'class': 'input-specification'}).text
-        input = input.replace('Входные данные', '')
-        input = InformaticsDownloader.fix_latex(input)
-        output = statements_soup.find('div', attrs={'class': 'output-specification'}).text
-        output = output.replace('Выходные данные', '')
-        output = InformaticsDownloader.fix_latex(output)
+        input_html = statements_soup.find('div', attrs={'class': 'input-specification'})
+        if input_html is not None:
+            input = input_html.text
+            input = input.replace('Входные данные', '')
+            input = InformaticsDownloader.fix_latex(input)
+        else:
+            input = ''
+
+        output_html = statements_soup.find('div', attrs={'class': 'output-specification'})
+        if output_html is not None:
+            output = output_html.text
+            output = output.replace('Выходные данные', '')
+            output = InformaticsDownloader.fix_latex(output)
+        else:
+            output = ''
         note = statements_soup.find('div', attrs={'class': 'note'})
         if note is not None:
             note = note.text.replace('Примечание', '')
@@ -121,7 +135,10 @@ class InformaticsDownloader:
     @staticmethod
     async def get_source_code(session, code_link):
         source_code_html = await InformaticsDownloader.get_async(session,
-                                                                 code_link)
+                                                                 code_link,
+                                                                 raw_bytes=True)
+        source_code_html = source_code_html.decode('utf-8', 'ignore')
+
         code = await asyncio.get_event_loop().run_in_executor(None,
                                                               InformaticsDownloader.parse_source_code,
                                                               source_code_html)
@@ -135,11 +152,11 @@ class InformaticsDownloader:
         solutions_count = json.loads(await InformaticsDownloader.get_async(session,
                                                                            settings.informatics_ajax,
                                                                            params=params))
-        solutions_count = solutions_count['result']['page_count']
+        solutions_count = min(solutions_count['result']['page_count'], settings.max_needed_correct_solutions)
 
         params = dict(settings.informatics_ajax_get_correct_solutions)
         params['problem_id'] = task_id
-        params['count'] = min(solutions_count, settings.max_needed_correct_solutions)
+        params['count'] = solutions_count
         solutions_table = await InformaticsDownloader.get_async(session, settings.informatics_ajax,
                                                                 params=params)
         solutions_table = json.loads(solutions_table)['result']['text']
@@ -155,28 +172,34 @@ class InformaticsDownloader:
 
     @staticmethod
     async def download_file(file_name: Path):
-        print('Loading file {}'.format(file_name))
-        async with aiofiles.open(str(file_name), mode='rb') as file:
-            return await file.read()
+        try:
+            async with InformaticsDownloader.opened_files_semaphore:
+                print('Loading file {}'.format(file_name))
+                async with aiofiles.open(str(file_name), mode='rb') as file:
+                    return await file.read()
+        except PermissionError as e:
+            await asyncio.sleep(2)
+            print('Retrying download')
+            return InformaticsDownloader.download_file(file_name)
 
     @staticmethod
     async def get_tests(task_id, contest_info, judges_dir: Path):
         print('Loading tests for {}'.format(task_id))
         contest_dir = judges_dir / contest_info['number']
         if not contest_dir.exists():
-            print("Couldn't find contest directory for {} {} {}".format(task_id,
-                                                                        contest_info['number'],
-                                                                        contest_info['problem_id']))
-            raise NoContestException
+            msg = "Couldn't find contest directory for {} {} {}. Remove the task.".format(task_id,
+                                                                                          contest_info['number'],
+                                                                                          contest_info['problem_id'])
+            raise NoContestException(msg)
         # Check <contest>/tests/<problem>
         tests_problem = contest_dir / 'tests' / contest_info['problem_id']
         # And <contest>/problems/<problem>/tests
         problems_problem_tests = contest_dir / 'problems' / contest_info['problem_id'] / 'tests'
         if not tests_problem.exists() and not problems_problem_tests.exists():
-            print("Couldn't find tests folder for {} {} {}".format(task_id,
-                                                                   contest_info['number'],
-                                                                   contest_info['problem_id']))
-            raise TestsNotFound
+            msg = "Couldn't find tests folder for {} {} {}. Remove the task.".format(task_id,
+                                                                                     contest_info['number'],
+                                                                                     contest_info['problem_id'])
+            raise TestsNotFound(msg)
         if tests_problem.exists():
             result_tests = tests_problem
         else:
@@ -198,15 +221,17 @@ class InformaticsDownloader:
         return list(zip(tests_files, corr_files))
 
     @staticmethod
-    async def parse_task(session, task_id, judges_dir: Path):
+    async def parse_task(session, task_id, judges_dir: Path, need_tests):
         html = await InformaticsDownloader.get_async(session,
                                                      settings.informatics_task_base_link.format(task_id))
         parsed_task = await asyncio.get_event_loop().run_in_executor(None,
                                                                      InformaticsDownloader.parse_html,
                                                                      html, task_id)
-        parsed_tests = await InformaticsDownloader.get_tests(task_id, parsed_task['contest_info'], judges_dir)
-        parsed_task['tests'] = parsed_tests
         parsed_task['id'] = task_id
+
+        if need_tests:
+            parsed_tests = await InformaticsDownloader.get_tests(task_id, parsed_task['contest_info'], judges_dir)
+            parsed_task['tests'] = parsed_tests
 
         parsed_task['solutions'] = await InformaticsDownloader.find_good_solutions(session, task_id)
         return parsed_task
@@ -223,15 +248,16 @@ class InformaticsDownloader:
                 return text
 
     @staticmethod
-    async def get_tasks_async(task_ids, judges_dir: Path):
+    async def get_tasks_async(task_ids, judges_dir: Path, need_tests: bool):
         with aiohttp.ClientSession() as session:
             await InformaticsDownloader.authorize(session)
             futures = []
             for task_id in task_ids:
-                futures.append(InformaticsDownloader.parse_task(session, task_id, judges_dir))
+                futures.append(InformaticsDownloader.parse_task(session, task_id, judges_dir, need_tests))
             return await asyncio.gather(*futures)
 
     @staticmethod
-    def get_tasks(task_ids, judges_dir: Path):
-        res = asyncio.get_event_loop().run_until_complete(InformaticsDownloader.get_tasks_async(task_ids, judges_dir))
+    def get_tasks(task_ids, judges_dir: Path, need_tests: bool):
+        res = asyncio.get_event_loop().run_until_complete(
+            InformaticsDownloader.get_tasks_async(task_ids, judges_dir, need_tests))
         return res

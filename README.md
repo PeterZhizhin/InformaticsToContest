@@ -32,8 +32,9 @@ $ sshfs ejudge@informatics.mccme.ru:/home/judges /home/<USERNAME>/<FOLDERNAME>/
 -d --directory Название директории для сохранения файлов.
                Должна отсутствовать в папке со скриптом чтобы избежать перезаписи.
 -j --judges Путь до папки примонтированной при помощи sshfs /home/judges
-            сайта informatics.mccme.ru
--i --ids Список номеров задач с сайта (указанных через пробел)
+            сайта informatics.mccme.ru.
+-i --ids Список номеров задач с сайта (указанных через пробел).
+-r --remove_tests Не включать тесты к задачам.
 
 Пример:
 $ ./main.py -d tasks -j /home/user/informatics/home/judges/ -i 501 520 3521
