@@ -88,6 +88,6 @@ contest_json = frozendict({
             "outputLimit": 268435456
         },
         "env": {},
-        "checkerId": "ncmp"
+        "checkerId": "wcmp"
     }
 })
