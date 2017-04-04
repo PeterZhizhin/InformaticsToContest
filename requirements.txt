@@ -1,11 +1,11 @@
-aiofiles (0.3.0)
-aiohttp (0.22.5)
-beautifulsoup4 (4.5.1)
-chardet (2.3.0)
-frozendict (1.0)
-lxml (3.6.4)
-multidict (1.2.2)
-pip (8.1.2)
-requests (2.11.1)
-setuptools (27.1.2)
-wheel (0.29.0)
+aiofiles
+aiohttp
+beautifulsoup4
+chardet
+frozendict
+lxml
+multidict
+pip
+requests
+setuptools
+wheel
